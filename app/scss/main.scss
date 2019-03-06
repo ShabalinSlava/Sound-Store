@@ -1,0 +1,125 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+body {
+  background-color: #000a26;
+}
+
+// SOUND-NAVIGATION-CONTAINER
+
+.sound-navigation-content {
+  @include respond-to(desktopLarge) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.sound-instruments {
+  @include respond-to(desktopLarge) {
+    max-width: 1279px;
+    width: 100%;
+    margin-left: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.06);
+  }
+}
+
+.sound-title {
+  @include respond-to(desktopLarge) {
+    font-size: 24.5px;
+    text-transform: uppercase;
+    font-family: "Roboto-Bold";
+    display: flex;
+    align-items: center;
+    margin-left: 123px;
+    color: #fff;
+  }
+}
+
+.sound-subtitle {
+  @include respond-to(desktopLarge) {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: "Roboto-Regular";
+    align-self: center;
+    color: #cdf6f7;
+  }
+}
+
+.sound-subtitle::after {
+  @include respond-to(desktopLarge) {
+    display: block;
+    content: "";
+    border-bottom: 3px solid #00fcff;
+  }
+}
+
+.navigation-icons {
+  @include respond-to(desktopLarge) {
+    display: flex;
+  }
+}
+
+#search {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/search.png");
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    margin: 2px 25px 0px 0px;
+    cursor: pointer;
+  }
+}
+
+#shopping-cart {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/Cart.png");
+    width: 21px;
+    height: 21px;
+    background-repeat: no-repeat;
+    font-size: 11px;
+    font-family: "Roboto-Light";
+    margin: 2px 25px 0px 0px;
+    padding: 3px 0px 0px 29px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+#favorites {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/Favorites.png");
+    width: 24px;
+    height: 22px;
+    background-repeat: no-repeat;
+    font-size: 11px;
+    font-family: "Roboto-Light";
+    margin: 2px 39px 0px 0px;
+    padding: 3px 0px 0px 28px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+#sound-menu {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/Menu.png");
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    margin: 26px 18px;
+    cursor: pointer;
+  }
+}
