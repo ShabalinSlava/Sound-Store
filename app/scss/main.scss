@@ -12,10 +12,42 @@
 }
 
 body {
+  position: relative;
   background-color: #000a26;
 }
 
+.container-content {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+
+.sound-word {
+  @include respond-to(desktopLarge) {
+    position: absolute;
+    font-size: 1000.74px;
+    text-transform: uppercase;
+    font-family: "Gobold-Bold";
+    color: #0a122d;
+  }
+}
+
+.store-word {
+  @include respond-to(desktopLarge) {
+    position: absolute;
+    font-size: 819.33px;
+    text-transform: uppercase;
+    font-family: "Gobold-Bold";
+    color: #0a122d;
+  }
+}
+
 // SOUND-NAVIGATION-CONTAINER
+
+#sound-navigation-container {
+  @include respond-to(desktopLarge) {
+    position: relative;
+  }
+}
 
 .sound-navigation-content {
   @include respond-to(desktopLarge) {
@@ -26,7 +58,7 @@ body {
 
 .sound-instruments {
   @include respond-to(desktopLarge) {
-    max-width: 1279px;
+    max-width: 1280px;
     width: 100%;
     margin-left: 60px;
     display: flex;
@@ -121,5 +153,494 @@ body {
     background-repeat: no-repeat;
     margin: 26px 18px;
     cursor: pointer;
+  }
+}
+
+// SEARCH-ON-CONTAINER
+
+#search-on-container {
+  @include respond-to(desktopLarge) {
+    display: none;
+  }
+}
+
+#search-on-container.visible {
+  @include respond-to(desktopLarge) {
+    width: 100%;
+    display: block;
+  }
+}
+
+.search-on-content {
+  @include respond-to(desktopLarge) {
+    margin: 0px 60px;
+  }
+}
+
+.search-on-button {
+  @include respond-to(desktopLarge) {
+    position: relative;
+  }
+}
+
+.search-on-button input {
+  @include respond-to(desktopLarge) {
+    font-size: 30px;
+    color: #0a2e5a;
+  }
+}
+
+input[type="text"] {
+  @include respond-to(desktopLarge) {
+    border: none;
+    outline: none;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #e6edf1;
+  }
+}
+
+#search-close {
+  @include respond-to(desktopLarge) {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-image: url("../img/close.png");
+    width: 17px;
+    height: 17px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
+
+//INFORMATION//
+
+#information {
+  @include respond-to(desktopLarge) {
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 560px;
+    float: right;
+    background-color: #fff;
+    overflow: scroll;
+    z-index: 12;
+  }
+}
+
+#information.visible {
+  @include respond-to(desktopLarge) {
+    display: block;
+  }
+}
+
+.information-content {
+  @include respond-to(desktopLarge) {
+    padding: 35px 0 40px 40px;
+  }
+}
+
+.information-title {
+  @include respond-to(desktopLarge) {
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: "Roboto-Bold";
+  }
+}
+
+.personnal {
+  @include respond-to(desktopLarge) {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Roboto-Light";
+  }
+}
+
+.information-content .nice-select {
+  @include respond-to(desktopLarge) {
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+    outline: none;
+    width: 100%;
+    max-width: 230px;
+    margin-top: 3px;
+    padding: 0px 0px;
+    text-transform: uppercase;
+    font-family: "Roboto-Bold";
+  }
+}
+
+.information-content input {
+  @include respond-to(desktopLarge) {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 14px;
+    padding: 14px 0px;
+    margin: 0px 25px 12px 0px;
+    width: 100%;
+    max-width: 230px;
+  }
+}
+
+input[type="adress"] {
+  @include respond-to(desktopLarge) {
+    max-width: 485px;
+  }
+}
+
+.note {
+  @include respond-to(desktopLarge) {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Roboto-Light";
+  }
+}
+
+input[type="note"] {
+  @include respond-to(desktopLarge) {
+    max-width: 485px;
+    margin-bottom: 40px;
+  }
+}
+
+.delivery {
+  @include respond-to(desktopLarge) {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Roboto-Light";
+  }
+}
+
+#delivers-mode {
+  @include respond-to(desktopLarge) {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+    width: 100%;
+    max-width: 230px;
+    padding: 14px 0px;
+  }
+}
+
+.your-item-container {
+  @include respond-to(desktopLarge) {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    max-width: 480px;
+    width: 100%;
+    height: 120px;
+    margin: 20px auto;
+    border-bottom: 1px solid #d9e0e3;
+  }
+}
+
+.your-cart-content {
+  @include respond-to(desktopLarge) {
+    background-color: #f2f9fd;
+  }
+}
+
+.your-cart-title {
+  @include respond-to(desktopLarge) {
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d9e0e3;
+    max-width: 480px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 14px 0px;
+    font-family: "Roboto-Bold";
+  }
+}
+
+.image-cart {
+  @include respond-to(desktopLarge) {
+    margin-top: 30px;
+  }
+}
+
+.image-cart img {
+  @include respond-to(desktopLarge) {
+    width: 59px;
+    height: 39px;
+  }
+}
+
+.description-produck-cart {
+  @include respond-to(desktopLarge) {
+    margin-top: 38px;
+  }
+}
+
+.headpones-brand {
+  @include respond-to(desktopLarge) {
+    display: block;
+    font-size: 18px;
+    font-family: "Roboto-Light";
+    color: black;
+  }
+}
+
+.quantity-cart {
+  @include respond-to(desktopLarge) {
+    border: none;
+    width: 12px;
+    height: 0px;
+    margin-top: 23px;
+  }
+}
+
+.quantity-cart input {
+  @include respond-to(desktopLarge) {
+    font-size: 14px;
+    background-color: #f2f9fd;
+    text-align: center;
+  }
+}
+
+button[class*="btn"] {
+  @include respond-to(desktopLarge) {
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.plus-btn {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/plus.png");
+    background-color: #f2f9fd;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    outline: none;
+  }
+}
+
+.minus-btn {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/minus.png");
+    width: 10px;
+    height: 2px;
+    background-repeat: no-repeat;
+    outline: none;
+  }
+}
+
+.total-price {
+  @include respond-to(desktopLarge) {
+    margin-top: 38px;
+    font-family: "Roboto-Light";
+    flex-grow: 0.6;
+    text-align: right;
+  }
+}
+
+.last-informations {
+  @include respond-to(desktopLarge) {
+    display: flex;
+    padding-bottom: 40px;
+  }
+}
+
+.consent-block {
+  @include respond-to(desktopLarge) {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #e5e5e5;
+    margin-right: 12px;
+  }
+}
+
+.box-agree {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/box-agree.jpg");
+    width: 14px;
+    height: 14px;
+    margin-right: 12px;
+  }
+}
+
+.consent-container {
+  @include respond-to(desktopLarge) {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    padding-left: 40px;
+  }
+}
+
+.total-button-container {
+  @include respond-to(desktopLarge) {
+    width: 40%;
+  }
+}
+
+.consent {
+  @include respond-to(desktopLarge) {
+    font-size: 14px;
+    font-family: "Roboto-Light";
+    color: #4c4d4e;
+  }
+}
+
+.consent a {
+  @include respond-to(desktopLarge) {
+    font-size: 14px;
+    font-family: "RobotoLight";
+    color: #81c5e8;
+    text-decoration: none;
+  }
+}
+
+.shipping-container,
+.subtotal-container {
+  @include respond-to(desktopLarge) {
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+}
+
+.shipping-title,
+.subtotal-title,
+.shipping-price,
+.subtotal-price {
+  @include respond-to(desktopLarge) {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #4c4d4e;
+    font-family: "Roboto-Light";
+  }
+}
+
+.submit {
+  @include respond-to(desktopLarge) {
+    width: 180px;
+    height: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #333;
+    color: #fff;
+    border: 0;
+    font-family: "Roboto-Light";
+  }
+}
+
+#information-close {
+  @include respond-to(desktopLarge) {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    background-image: url("../img/close.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+  }
+}
+
+//INFORMATION//
+
+#favorites-container {
+  @include respond-to(desktopLarge) {
+    display: none;
+  }
+}
+
+#favorites-container.visible {
+  @include respond-to(desktopLarge) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 100%;
+    background-color: #000a26;
+    overflow: scroll;
+  }
+}
+
+.favorites-title {
+  @include respond-to(desktopLarge) {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "Roboto-Bold";
+    margin: 30px 10px 20px 10px;
+    color: #fff;
+  }
+}
+
+.headpones-models-images {
+  @include respond-to(desktopLarge) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.headpones-model {
+  @include respond-to(desktopLarge) {
+    width: 100%;
+    border: 6.5px solid transparent;
+  }
+}
+
+.headpones-model-image {
+  @include respond-to(desktopLarge) {
+    padding-top: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.headpones-model:nth-child(1) .headpones-model-image {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/headphones1.png");
+  }
+}
+
+.headpones-model:nth-child(2) .headpones-model-image {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/headphones2.png");
+  }
+}
+
+.headpones-model:nth-child(3) .headpones-model-image {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/headphones3.png");
+  }
+}
+
+.headpones-model:nth-child(4) .headpones-model-image {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/headphones4.png");
+  }
+}
+
+.headpones-model:nth-child(5) .headpones-model-image {
+  @include respond-to(desktopLarge) {
+    background-image: url("../img/headphones5.png");
+  }
+}
+
+#favorites-close {
+  @include respond-to(desktopLarge) {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    background-image: url("../img/close1.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+    color: #fff;
   }
 }

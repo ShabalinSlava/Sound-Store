@@ -21,12 +21,14 @@
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
-
+	<link rel="stylesheet" href="libs/nice-select/nice-select.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
+	<!-- <div class="sound-word">soundblu</div> -->
+	<!-- <div class="store-word">edio</div> -->
 
 	<div class="sound-navigation-container">
 		<div class="sound-navigation-content">
@@ -43,7 +45,141 @@
 			<div id="sound-menu"></div>
 		</div>
 	</div>
+
+	<div id="search-on-container">
+		<div class="search-on-content">
+			<div class="container-content">
+				<form>
+					<div class="search-on-button">
+						<input type="text" id="search-line" placeholder="search">
+						<div id="search-close"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="information">
+		<div class="container-content">
+			<div class="information-cart-content">
+				<div class="information-content">
+					<div class="information-title">informations</div>
+					<div class="personnal">personnal informations</div>
+					<select id="country">
+						<option data-display="country"></option>
+						<option value="#">England</option>
+						<option value="#">France</option>
+						<option value="#">Germany</option>
+						<option value="#">Italien</option>
+						<option value="#">Russland</option>
+					</select>
+					<form>
+						<input type="first-name" placeholder="First name">
+						<input type="second-name" placeholder="Second name">
+						<input type="adress" placeholder="Adress">
+						<input type="postal-code" placeholder="Postal code">
+						<input type="city" placeholder="City">
+						<input type="e-mail" placeholder="E-mail">
+						<input type="phone" placeholder="Phone">
+					</form>
+					<div class="note">Notes</div>
+					<input type="note" placeholder="Note">
+					<div class="delivery">delivery mode</div>
+					<select id="delivers-mode">
+						<option data-display="price"></option>
+						<option value="#">Collisimo France,$20.00</option>
+						<option value="#">Collisimo England,$25.00</option>
+						<option value="#">Collisimo Germany,$30.00</option>
+						<option value="#">Collisimo Italien,$50.00</option>
+						<option value="#">Collisimo Russland,$100.00</option>
+					</select>
+				</div>
+				<div class="your-cart-content">
+					<div class="your-cart-title">your cart</div>
+					<div class="your-item-container">
+						<div class="quantity-cart">
+							<button class="plus-btn" type="button" name="button">
+							</button>
+							<input type="text" name="name" value="1">
+							<button class="minus-btn" type="button" name="button">
+							</button>
+						</div>
+						<div class="image-cart">
+							<img src="../img/headphones1.png" alt="headpones">
+						</div>
+						<div class="description-produck-cart">
+							<div class="headpones-brand">iBasso&nbspSR1</div>
+						</div>
+						<div class="total-price">$105.00</div>
+					</div>
+					<div class="your-item-container">
+						<div class="quantity-cart">
+							<button class="plus-btn" type="button" name="button">
+							</button>
+							<input type="text" name="name" value="1">
+							<button class="minus-btn" type="button" name="button">
+							</button>
+						</div>
+						<div class="image-cart">
+							<img src="../img/headphones2.png" alt="headpones">
+						</div>
+						<div class="description-produck-cart">
+							<div class="headpones-brand">Fostex&nbspT60RP</div>
+						</div>
+						<div class="total-price">$160.00</div>
+					</div>
+					<div class="last-informations">
+						<div class="consent-container">
+							<div class="consent-block"></div>
+							<div class="consent">I agree <a href="">terms of use and privacy</a></div>
+						</div>
+						<div class="total-button-container">
+							<div class="shipping-container">
+								<div class="shipping-title">shipping</div>
+								<div class="shipping-price">$20.00</div>
+							</div>
+							<div class="subtotal-container">
+								<div class="subtotal-title">subtotal</div>
+								<div class="subtotal-price">$285.00</div>
+							</div>
+							<button class="submit">confirm</button>
+						</div>
+					</div>
+				</div>
+				<div id="information-close"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="favorites-container">
+		<div class="container-content">
+			<div class="favorites-content">
+				<div class="favorites-title">favorites(5)</div>
+				<div class="headpones-models-images">
+					<div class="headpones-model">
+						<div class="headpones-model-image"></div>
+					</div>
+					<div class="headpones-model">
+						<div class="headpones-model-image"></div>
+					</div>
+					<div class="headpones-model">
+						<div class="headpones-model-image"></div>
+					</div>
+					<div class="headpones-model">
+						<div class="headpones-model-image"></div>
+					</div>
+					<div class="headpones-model">
+						<div class="headpones-model-image"></div>
+					</div>
+				</div>
+				<div id="favorites-close"></div>
+			</div>
+		</div>
+	</div>
+
+
 	<script src="js/scripts.min.js"></script>
+	<script src="libs/nice-select/nice-select.js"></script>
 
 </body>
 
