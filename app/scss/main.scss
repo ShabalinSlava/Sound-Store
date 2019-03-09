@@ -11,14 +11,15 @@
   color: #fff;
 }
 
-body {
-  position: relative;
-  background-color: #000a26;
-}
+// SOUND-STORE-WRAPPER
 
-.container-content {
-  max-width: 1280px;
-  margin: 0px auto;
+.sound-store-wrapper {
+  background-color: #000a26;
+  position: relative;
+  overflow: hidden;
+  max-width: 1400px;
+  width: 100%;
+  height: 1000px;
 }
 
 .sound-word {
@@ -28,6 +29,8 @@ body {
     text-transform: uppercase;
     font-family: "Gobold-Bold";
     color: #0a122d;
+    top: -510px;
+    left: -39px;
   }
 }
 
@@ -38,15 +41,23 @@ body {
     text-transform: uppercase;
     font-family: "Gobold-Bold";
     color: #0a122d;
+    bottom: -450px;
+    left: -50px;
   }
 }
 
 // SOUND-NAVIGATION-CONTAINER
 
-#sound-navigation-container {
+.sound-navigation-container {
   @include respond-to(desktopLarge) {
     position: relative;
+    z-index: 1;
   }
+}
+
+.container-content {
+  max-width: 1280px;
+  margin: 0px auto;
 }
 
 .sound-navigation-content {
@@ -565,6 +576,7 @@ button[class*="btn"] {
     height: 100%;
     background-color: #000a26;
     overflow: scroll;
+    z-index: 2;
   }
 }
 
@@ -573,7 +585,7 @@ button[class*="btn"] {
     font-size: 20px;
     text-transform: uppercase;
     font-family: "Roboto-Bold";
-    margin: 30px 10px 20px 10px;
+    margin: 30px 12px 20px 12px;
     color: #fff;
   }
 }
@@ -643,4 +655,154 @@ button[class*="btn"] {
     height: 17px;
     color: #fff;
   }
+}
+
+//WRAPPER//
+
+.wrapper .active {
+  color: red;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 10;
+  display: none;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tab-container {
+  position: relative;
+  width: 81px;
+  height: 81px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.tab-container:hover {
+  width: 130px;
+  height: 120px;
+  background-color: #0079ff;
+}
+
+.tab:hover {
+  width: 70px;
+  height: 94px;
+  background-color: #0079ff;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.tab {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 59px;
+  height: 59px;
+  background-repeat: no-repeat;
+}
+
+.tab-container:nth-child(1) .tab {
+  background-image: url("../img/headphones1.png");
+}
+
+.tab-container:nth-child(2) .tab {
+  background-image: url("../img/headphones2.png");
+}
+
+.tab-container:nth-child(3) .tab {
+  background-image: url("../img/headphones6.png");
+  background-size: contain;
+  background-position: bottom;
+  background-color: #fff;
+}
+
+.tab-container:nth-child(3) .tab:hover {
+  background-color: #0079ff;
+}
+
+.tab-container:nth-child(4) .tab {
+  background-image: url("../img/headphones3.png");
+}
+
+.tab-container:nth-child(5) .tab {
+  background-image: url("../img/headphones4.png");
+}
+
+.tab-container:nth-child(6) .tab {
+  background-image: url("../img/headphones5.png");
+}
+
+.tab_item {
+  font-size: 30px;
+}
+
+//COLOURS-CONTAINER//
+
+.colours-container {
+  position: relative;
+  display: inline-block;
+  z-index: 5;
+}
+
+.colours-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Roboto-Light";
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 1.3;
+}
+
+.colours-subtitle {
+  font-size: 19px;
+  text-transform: uppercase;
+  font-family: "Roboto-Light";
+  color: #fff;
+  letter-spacing: 0px;
+}
+
+.color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.color:nth-child(1) {
+  background-color: #008aff;
+}
+
+.color:nth-child(1):hover {
+  border: 4px solid red;
+  line-height: 100px;
+}
+
+.color:nth-child(2) {
+  background-color: #fff;
+}
+
+.color:nth-child(3) {
+  background-color: #00fff6;
+}
+
+.color:nth-child(4) {
+  background-color: #ff0000;
+}
+
+.color:nth-child(5) {
+  background-color: #ffea00;
 }
