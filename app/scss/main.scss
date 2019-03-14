@@ -20,10 +20,11 @@
   max-width: 1400px;
   width: 100%;
   height: 1000px;
+  cursor: pointer;
 }
 
 .sound-word {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     position: absolute;
     font-size: 1000.74px;
     text-transform: uppercase;
@@ -35,7 +36,7 @@
 }
 
 .store-word {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     position: absolute;
     font-size: 819.33px;
     text-transform: uppercase;
@@ -49,7 +50,7 @@
 // SOUND-NAVIGATION-CONTAINER
 
 .sound-navigation-container {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     position: relative;
     z-index: 1;
   }
@@ -61,14 +62,14 @@
 }
 
 .sound-navigation-content {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: flex;
     justify-content: space-between;
   }
 }
 
 .sound-instruments {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     max-width: 1280px;
     width: 100%;
     margin-left: 60px;
@@ -80,7 +81,7 @@
 }
 
 .sound-title {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 24.5px;
     text-transform: uppercase;
     font-family: "Roboto-Bold";
@@ -92,7 +93,7 @@
 }
 
 .sound-subtitle {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 17px;
     text-transform: uppercase;
     font-family: "Roboto-Regular";
@@ -102,7 +103,7 @@
 }
 
 .sound-subtitle::after {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: block;
     content: "";
     border-bottom: 3px solid #00fcff;
@@ -110,13 +111,15 @@
 }
 
 .navigation-icons {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: flex;
   }
 }
 
+// SEARCH-ON-CONTAINER
+
 #search {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     background-image: url("../img/search.png");
     width: 18px;
     height: 18px;
@@ -126,8 +129,65 @@
   }
 }
 
+#search-on-container {
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+#search-on-container.visible {
+  @include respond-to(tablet) {
+    width: 100%;
+    display: block;
+  }
+}
+
+.search-on-content {
+  @include respond-to(tablet) {
+    margin: 0px 60px;
+  }
+}
+
+.search-on-button {
+  @include respond-to(tablet) {
+    position: relative;
+  }
+}
+
+.search-on-button input {
+  @include respond-to(tablet) {
+    font-size: 30px;
+    color: #0a2e5a;
+  }
+}
+
+input[type="text"] {
+  @include respond-to(tablet) {
+    border: none;
+    outline: none;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #e6edf1;
+  }
+}
+
+#search-close {
+  @include respond-to(tablet) {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-image: url("../img/close.png");
+    width: 17px;
+    height: 17px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
+
+//SHOPPING-CART//
+
 #shopping-cart {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     background-image: url("../img/Cart.png");
     width: 21px;
     height: 21px;
@@ -141,93 +201,8 @@
   }
 }
 
-#favorites {
-  @include respond-to(desktopLarge) {
-    background-image: url("../img/Favorites.png");
-    width: 24px;
-    height: 22px;
-    background-repeat: no-repeat;
-    font-size: 11px;
-    font-family: "Roboto-Light";
-    margin: 2px 39px 0px 0px;
-    padding: 3px 0px 0px 28px;
-    color: #fff;
-    cursor: pointer;
-  }
-}
-
-#sound-menu {
-  @include respond-to(desktopLarge) {
-    background-image: url("../img/Menu.png");
-    width: 23px;
-    height: 23px;
-    background-repeat: no-repeat;
-    margin: 26px 18px;
-    cursor: pointer;
-  }
-}
-
-// SEARCH-ON-CONTAINER
-
-#search-on-container {
-  @include respond-to(desktopLarge) {
-    display: none;
-  }
-}
-
-#search-on-container.visible {
-  @include respond-to(desktopLarge) {
-    width: 100%;
-    display: block;
-  }
-}
-
-.search-on-content {
-  @include respond-to(desktopLarge) {
-    margin: 0px 60px;
-  }
-}
-
-.search-on-button {
-  @include respond-to(desktopLarge) {
-    position: relative;
-  }
-}
-
-.search-on-button input {
-  @include respond-to(desktopLarge) {
-    font-size: 30px;
-    color: #0a2e5a;
-  }
-}
-
-input[type="text"] {
-  @include respond-to(desktopLarge) {
-    border: none;
-    outline: none;
-    width: 100%;
-    vertical-align: middle;
-    background-color: #e6edf1;
-  }
-}
-
-#search-close {
-  @include respond-to(desktopLarge) {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-image: url("../img/close.png");
-    width: 17px;
-    height: 17px;
-    background-repeat: no-repeat;
-    cursor: pointer;
-  }
-}
-
-//INFORMATION//
-
 #information {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: none;
     position: fixed;
     top: 0px;
@@ -242,20 +217,14 @@ input[type="text"] {
   }
 }
 
-#information.visible {
-  @include respond-to(desktopLarge) {
-    display: block;
-  }
-}
-
 .information-content {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     padding: 35px 0 40px 40px;
   }
 }
 
 .information-title {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 35px;
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -264,7 +233,7 @@ input[type="text"] {
 }
 
 .personnal {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 14px;
     text-transform: uppercase;
     font-family: "Roboto-Light";
@@ -272,7 +241,7 @@ input[type="text"] {
 }
 
 .information-content .nice-select {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 14px;
     border: none;
     border-bottom: 1px solid #e4e4e4;
@@ -287,7 +256,7 @@ input[type="text"] {
 }
 
 .information-content input {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     border: none;
     outline: none;
     border-bottom: 1px solid #e4e4e4;
@@ -300,13 +269,13 @@ input[type="text"] {
 }
 
 input[type="adress"] {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     max-width: 485px;
   }
 }
 
 .note {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 14px;
     text-transform: uppercase;
     font-family: "Roboto-Light";
@@ -314,14 +283,14 @@ input[type="adress"] {
 }
 
 input[type="note"] {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     max-width: 485px;
     margin-bottom: 40px;
   }
 }
 
 .delivery {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 14px;
     text-transform: uppercase;
     font-family: "Roboto-Light";
@@ -329,7 +298,7 @@ input[type="note"] {
 }
 
 #delivers-mode {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     outline: none;
     border: none;
     border-bottom: 1px solid #e4e4e4;
@@ -340,7 +309,7 @@ input[type="note"] {
 }
 
 .your-item-container {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -353,13 +322,13 @@ input[type="note"] {
 }
 
 .your-cart-content {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     background-color: #f2f9fd;
   }
 }
 
 .your-cart-title {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 14px;
     text-transform: uppercase;
     border-bottom: 1px solid #d9e0e3;
@@ -372,26 +341,26 @@ input[type="note"] {
 }
 
 .image-cart {
-  @include respond-to(desktopLarge) {
-    margin-top: 30px;
+  @include respond-to(tablet) {
+    margin-top: 10px;
   }
 }
 
 .image-cart img {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     width: 59px;
-    height: 39px;
+    height: 90px;
   }
 }
 
 .description-produck-cart {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     margin-top: 38px;
   }
 }
 
 .headpones-brand {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: block;
     font-size: 18px;
     font-family: "Roboto-Light";
@@ -400,7 +369,7 @@ input[type="note"] {
 }
 
 .quantity-cart {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     border: none;
     width: 12px;
     height: 0px;
@@ -409,7 +378,7 @@ input[type="note"] {
 }
 
 .quantity-cart input {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 14px;
     background-color: #f2f9fd;
     text-align: center;
@@ -417,14 +386,14 @@ input[type="note"] {
 }
 
 button[class*="btn"] {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     border: none;
     cursor: pointer;
   }
 }
 
 .plus-btn {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     background-image: url("../img/plus.png");
     background-color: #f2f9fd;
     width: 10px;
@@ -435,7 +404,7 @@ button[class*="btn"] {
 }
 
 .minus-btn {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     background-image: url("../img/minus.png");
     width: 10px;
     height: 2px;
@@ -445,7 +414,7 @@ button[class*="btn"] {
 }
 
 .total-price {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     margin-top: 38px;
     font-family: "Roboto-Light";
     flex-grow: 0.6;
@@ -454,14 +423,14 @@ button[class*="btn"] {
 }
 
 .last-informations {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: flex;
     padding-bottom: 40px;
   }
 }
 
 .consent-block {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     width: 14px;
     height: 14px;
     border: 1px solid #e5e5e5;
@@ -470,7 +439,7 @@ button[class*="btn"] {
 }
 
 .box-agree {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     background-image: url("../img/box-agree.jpg");
     width: 14px;
     height: 14px;
@@ -479,7 +448,7 @@ button[class*="btn"] {
 }
 
 .consent-container {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: flex;
     align-items: center;
     width: 60%;
@@ -488,13 +457,13 @@ button[class*="btn"] {
 }
 
 .total-button-container {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     width: 40%;
   }
 }
 
 .consent {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 14px;
     font-family: "Roboto-Light";
     color: #4c4d4e;
@@ -502,7 +471,7 @@ button[class*="btn"] {
 }
 
 .consent a {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 14px;
     font-family: "RobotoLight";
     color: #81c5e8;
@@ -512,7 +481,7 @@ button[class*="btn"] {
 
 .shipping-container,
 .subtotal-container {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: flex;
     width: 180px;
     justify-content: space-between;
@@ -524,7 +493,7 @@ button[class*="btn"] {
 .subtotal-title,
 .shipping-price,
 .subtotal-price {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 14px;
     text-transform: uppercase;
     color: #4c4d4e;
@@ -533,7 +502,7 @@ button[class*="btn"] {
 }
 
 .submit {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     width: 180px;
     height: 50px;
     font-size: 14px;
@@ -546,7 +515,7 @@ button[class*="btn"] {
 }
 
 #information-close {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -559,20 +528,29 @@ button[class*="btn"] {
   }
 }
 
-//INFORMATION//
+// FAVORITES
 
-#favorites-container {
-  @include respond-to(desktopLarge) {
-    display: none;
+#favorites {
+  @include respond-to(tablet) {
+    background-image: url("../img/Favorites.png");
+    width: 24px;
+    height: 22px;
+    background-repeat: no-repeat;
+    font-size: 11px;
+    font-family: "Roboto-Light";
+    margin: 2px 39px 0px 0px;
+    padding: 3px 0px 0px 28px;
+    color: #fff;
+    cursor: pointer;
   }
 }
 
-#favorites-container.visible {
-  @include respond-to(desktopLarge) {
+#favorites-container {
+  @include respond-to(tablet) {
     position: fixed;
     top: 0;
     right: 0;
-    display: block;
+    display: none;
     height: 100%;
     background-color: #000a26;
     overflow: scroll;
@@ -581,7 +559,7 @@ button[class*="btn"] {
 }
 
 .favorites-title {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     font-size: 20px;
     text-transform: uppercase;
     font-family: "Roboto-Bold";
@@ -591,79 +569,78 @@ button[class*="btn"] {
 }
 
 .headpones-models-images {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
 .headpones-model {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     width: 100%;
-    border: 6.5px solid transparent;
+    border: 6px solid transparent;
+    margin: 0px 6px;
   }
 }
 
 .headpones-model-image {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     padding-top: 100%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: bottom;
   }
 }
 
 .headpones-model:nth-child(1) .headpones-model-image {
-  @include respond-to(desktopLarge) {
-    background-image: url("../img/headphones1.png");
+  @include respond-to(tablet) {
+    background-image: url("../img/Headphonebig1.png");
   }
 }
 
 .headpones-model:nth-child(2) .headpones-model-image {
-  @include respond-to(desktopLarge) {
-    background-image: url("../img/headphones2.png");
+  @include respond-to(tablet) {
+    background-image: url("../img/Headphonebig2.png");
   }
 }
 
 .headpones-model:nth-child(3) .headpones-model-image {
-  @include respond-to(desktopLarge) {
+  @include respond-to(tablet) {
     background-image: url("../img/headphones3.png");
   }
 }
 
 .headpones-model:nth-child(4) .headpones-model-image {
-  @include respond-to(desktopLarge) {
-    background-image: url("../img/headphones4.png");
+  @include respond-to(tablet) {
+    background-image: url("../img/Headphonebig5.png");
   }
 }
 
 .headpones-model:nth-child(5) .headpones-model-image {
-  @include respond-to(desktopLarge) {
-    background-image: url("../img/headphones5.png");
+  @include respond-to(tablet) {
+    background-image: url("../img/Headphonebig6.png");
   }
 }
 
-#favorites-close {
-  @include respond-to(desktopLarge) {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    display: inline-block;
-    background-image: url("../img/close1.png");
+#sound-menu {
+  @include respond-to(tablet) {
+    background-image: url("../img/Menu.png");
+    width: 23px;
+    height: 23px;
     background-repeat: no-repeat;
+    margin: 26px 18px;
     cursor: pointer;
-    width: 17px;
-    height: 17px;
-    color: #fff;
   }
 }
+
+//WRAPPER//
 
 .tabs-container {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
-
-//WRAPPER//
 
 .tabs-wrapper .active {
   color: red;
@@ -678,7 +655,32 @@ button[class*="btn"] {
   z-index: 10;
 }
 
-.tabs {
+.tabs-arrows {
+  text-align: right;
+}
+
+.arrow-prev,
+.arrow-next {
+  display: inline-block;
+  width: 19px;
+  height: 17px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-right: 30px;
+  z-index: 5;
+}
+
+.arrow-prev {
+  background-image: url("../img/prev.png");
+  margin-bottom: 26px;
+}
+
+.arrow-next {
+  background-image: url("../img/next.png");
+  margin-top: 26px;
+}
+
+.tabs-block {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -696,22 +698,16 @@ button[class*="btn"] {
 .tab-container {
   position: relative;
   width: 81px;
-  height: 81px;
+  height: 94px;
   background: #fff;
   cursor: pointer;
+  border-bottom: 1px solid #c9cbd3;
 }
 
 .tab-container.active {
   width: 130px;
   height: 120px;
   background: linear-gradient(to right, #00cfff, #0079ff);
-}
-
-.tab-image.active {
-  width: 70px;
-  height: 94px;
-  background-size: contain;
-  background-position: bottom;
 }
 
 .tab-image {
@@ -723,6 +719,13 @@ button[class*="btn"] {
   width: 59px;
   height: 59px;
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.tab-image.active {
+  width: 70px;
+  height: 94px;
   background-size: contain;
   background-position: bottom;
 }
@@ -753,12 +756,12 @@ button[class*="btn"] {
 
 //TAB-CONTENT//
 
-.tab-content {
+.tab_item {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.tab_item {
+.tab-item-image {
   position: relative;
   display: inline-block;
   width: 378px;
@@ -768,27 +771,27 @@ button[class*="btn"] {
   background-size: contain;
 }
 
-.tab_item:nth-child(1) {
+.tab_item:nth-child(1) .tab-item-image {
   background-image: url("../img/Headphonebig1.png");
 }
 
-.tab_item:nth-child(2) {
+.tab_item:nth-child(2) .tab-item-image {
   background-image: url("../img/Headphonebig2.png");
 }
 
-.tab_item:nth-child(3) {
+.tab_item:nth-child(3) .tab-item-image {
   background-image: url("../img/Headphonebig.png");
 }
 
-.tab_item:nth-child(4) {
+.tab_item:nth-child(4) .tab-item-image {
   background-image: url("../img/Headphonebig1.png");
 }
 
-.tab_item:nth-child(5) {
+.tab_item:nth-child(5) .tab-item-image {
   background-image: url("../img/Headphonebig5.png");
 }
 
-.tab_item:nth-child(6) {
+.tab_item:nth-child(6) .tab-item-image {
   background-image: url("../img/Headphonebig6.png");
 }
 
@@ -799,15 +802,140 @@ button[class*="btn"] {
   color: #fff;
   font-family: "Roboto-Thin";
   letter-spacing: 2px;
+  line-height: 2.6;
+  margin-bottom: -1px;
 }
 
 .details-title::after {
   display: block;
   content: "";
   border-bottom: 2px solid #00b3f2;
-  line-height: 2.6;
 }
 
+.details-images-container {
+  display: flex;
+  margin-bottom: 13px;
+}
+
+.image-container {
+  width: 59px;
+  height: 86px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.detail-image {
+  width: 59px;
+  height: 59px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  cursor: pointer;
+  background-color: #fff;
+  border-right: 1px solid #c9cbd3;
+}
+
+.detail-image.active {
+  width: 59px;
+  height: 86px;
+  background-position: center;
+}
+
+.tab_item:nth-child(1) .image-container:nth-child(1) .detail-image {
+  background-image: url("../img/Headphonebig1.png");
+}
+
+.tab_item:nth-child(1) .image-container:nth-child(2) .detail-image {
+  background-image: url("../img/Headphonebig7.png");
+}
+
+.tab_item:nth-child(1) .image-container:nth-child(3) .detail-image {
+  background-image: url("../img/Headphonebig8.png");
+}
+
+.tab_item:nth-child(1) .image-container:nth-child(4) .detail-image {
+  background-image: url("../img/Headphonebig9.png");
+}
+
+.tab_item:nth-child(2) .image-container:nth-child(1) .detail-image {
+  background-image: url("../img/Headphonebig2.png");
+}
+
+.tab_item:nth-child(2) .image-container:nth-child(2) .detail-image {
+  background-image: url("../img/Headphonebig7.png");
+}
+
+.tab_item:nth-child(2) .image-container:nth-child(3) .detail-image {
+  background-image: url("../img/Headphonebig8.png");
+}
+
+.tab_item:nth-child(2) .image-container:nth-child(4) .detail-image {
+  background-image: url("../img/Headphonebig9.png");
+}
+
+.tab_item:nth-child(3) .image-container:nth-child(1) .detail-image {
+  background-image: url("../img/Headphonebig.png");
+}
+
+.tab_item:nth-child(3) .image-container:nth-child(2) .detail-image {
+  background-image: url("../img/Headphonebig7.png");
+}
+
+.tab_item:nth-child(3) .image-container:nth-child(3) .detail-image {
+  background-image: url("../img/Headphonebig8.png");
+}
+
+.tab_item:nth-child(3) .image-container:nth-child(4) .detail-image {
+  background-image: url("../img/Headphonebig9.png");
+}
+
+.tab_item:nth-child(4) .image-container:nth-child(1) .detail-image {
+  background-image: url("../img/Headphonebig1.png");
+}
+
+.tab_item:nth-child(4) .image-container:nth-child(2) .detail-image {
+  background-image: url("../img/Headphonebig7.png");
+}
+
+.tab_item:nth-child(4) .image-container:nth-child(3) .detail-image {
+  background-image: url("../img/Headphonebig8.png");
+}
+
+.tab_item:nth-child(4) .image-container:nth-child(4) .detail-image {
+  background-image: url("../img/Headphonebig9.png");
+}
+
+.tab_item:nth-child(5) .image-container:nth-child(1) .detail-image {
+  background-image: url("../img/Headphonebig5.png");
+}
+
+.tab_item:nth-child(5) .image-container:nth-child(2) .detail-image {
+  background-image: url("../img/Headphonebig7.png");
+}
+
+.tab_item:nth-child(5) .image-container:nth-child(3) .detail-image {
+  background-image: url("../img/Headphonebig8.png");
+}
+
+.tab_item:nth-child(5) .image-container:nth-child(4) .detail-image {
+  background-image: url("../img/Headphonebig9.png");
+}
+
+.tab_item:nth-child(6) .image-container:nth-child(1) .detail-image {
+  background-image: url("../img/Headphonebig6.png");
+}
+
+.tab_item:nth-child(6) .image-container:nth-child(2) .detail-image {
+  background-image: url("../img/Headphonebig7.png");
+}
+
+.tab_item:nth-child(6) .image-container:nth-child(3) .detail-image {
+  background-image: url("../img/Headphonebig8.png");
+}
+
+.tab_item:nth-child(6) .image-container:nth-child(4) .detail-image {
+  background-image: url("../img/Headphonebig9.png");
+}
 //COLOURS-CONTAINER//
 
 .colours-container {
@@ -854,7 +982,26 @@ button[class*="btn"] {
   width: 45px;
   height: 45px;
   border-radius: 50%;
+}
+
+.color-wrapper.active:nth-child(1) {
+  border: 3px solid #008aff;
+}
+
+.color-wrapper.active:nth-child(2) {
   border: 3px solid #fff;
+}
+
+.color-wrapper.active:nth-child(3) {
+  border: 3px solid #00fff6;
+}
+
+.color-wrapper.active:nth-child(4) {
+  border: 3px solid #ff0000;
+}
+
+.color-wrapper.active:nth-child(5) {
+  border: 3px solid #ffea00;
 }
 
 .color {
@@ -886,4 +1033,212 @@ button[class*="btn"] {
 
 .color-wrapper:nth-child(5) .color {
   background-color: #ffea00;
+}
+
+.name-brend {
+  font-size: 215px;
+  font-family: "Gobold-Bold";
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: -38px;
+  line-height: 1.1;
+}
+
+.subname-brend {
+  font-size: 176px;
+  font-family: "Gobold-Bold";
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: -24px;
+}
+
+//FOOTER-CONTAINER//
+
+.footer-container {
+  position: relative;
+  z-index: 10;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-wrapper-container {
+  background-color: #000724;
+}
+
+.payment-container {
+  padding: 17px 97px 30px 83px;
+}
+
+.pay-title {
+  display: inline-block;
+  font-size: 14px;
+  color: #d7d8dd;
+  font-family: "Roboto-Regular";
+  line-height: 2;
+  margin-bottom: 27px;
+}
+
+.pay-title::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #f5f5f6;
+}
+
+.pay-card {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 13px;
+}
+
+.visa,
+.mastercard,
+.webmoney,
+.western,
+.bank {
+  display: inline-block;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.visa {
+  background-image: url("../img/visa.png");
+  width: 44px;
+  height: 14px;
+}
+
+.mastercard {
+  background-image: url("../img/Mastercard.png");
+  width: 28px;
+  height: 17px;
+}
+
+.webmoney {
+  background-image: url("../img/Webmoney.png");
+  width: 16px;
+  height: 16px;
+}
+
+.transfer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.western {
+  background-image: url("../img/western.png");
+  width: 76px;
+  height: 17px;
+}
+
+.bank {
+  background-image: url("../img/bank.png");
+  width: 20px;
+  height: 20px;
+}
+
+.features-wrapper {
+  background-color: #000;
+  flex-grow: 1;
+}
+.features {
+  padding: 18px 48px 0px 86px;
+}
+
+.features-title {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #d7d8dd;
+  font-family: "Roboto-Regular";
+  line-height: 2;
+  margin-bottom: 8px;
+  letter-spacing: 2.9px;
+}
+
+.features-title::after {
+  display: block;
+  content: "";
+  border-bottom: 1px solid #f5f5f6;
+  width: 144px;
+}
+
+.features-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 428px;
+  width: 100%;
+  margin-left: 16px;
+  line-height: 1.5;
+}
+
+li a {
+  text-decoration: none;
+  font-size: 13px;
+  font-family: "Roboto-Light";
+  color: #fff;
+}
+
+ul {
+  list-style-image: url("../img/list.png");
+}
+
+.cart-button {
+  display: flex;
+  margin-bottom: -7px;
+}
+
+#favorite-heart {
+  background-image: url("../img/favorite-heart.png");
+  width: 39px;
+  height: 36px;
+  background-repeat: no-repeat;
+  margin-right: 19px;
+  cursor: pointer;
+}
+
+.heart-mini {
+  display: none;
+}
+
+.heart-mini.visible {
+  display: inline-block;
+  background-image: url("../img/heart-mini.png");
+  width: 25px;
+  height: 23px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 7px 0px 0px 7px;
+}
+
+.add-cart {
+  position: relative;
+  width: 174px;
+  height: 36px;
+  background-color: #00eaff;
+  border-radius: 23px;
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+  font-family: "Roboto-Medium";
+  line-height: 2.4;
+  text-align: center;
+  cursor: pointer;
+}
+
+.add-cart-arrow {
+  position: absolute;
+  background-image: url("../img/arrow.png");
+  width: 92px;
+  height: 57px;
+  background-repeat: no-repeat;
+  top: -12px;
+  right: -34px;
 }

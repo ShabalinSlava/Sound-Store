@@ -11,12 +11,34 @@ $(function() {
     $("#search-line").focus();
   });
 
-  $("#shopping-cart").click(function(event) {
-    $("#information").addClass("visible");
+  $("#shopping-cart").click(function(e) {
+    e.stopPropagation();
+    $("#information").show();
   });
 
-  $("#information-close").click(function(event) {
-    $("#information").removeClass("visible");
+  $(document).click(function() {
+    $("#information").hide();
+  });
+
+  $("#information").click(function() {
+    $(this)
+      .delay(1000)
+      .hide(10);
+  });
+
+  $(".add-cart").click(function(e) {
+    e.stopPropagation();
+    $("#information").show();
+  });
+
+  $(document).click(function() {
+    $("#information").hide();
+  });
+
+  $("#information").click(function() {
+    $(this)
+      .delay(1000)
+      .hide(10);
   });
 
   $("#country").niceSelect();
@@ -27,12 +49,38 @@ $(function() {
     $(".consent-block").toggleClass("box-agree");
   });
 
-  $("#favorites").click(function(event) {
-    $("#favorites-container").addClass("visible");
+  $("#favorites").click(function(e) {
+    e.stopPropagation();
+    $("#favorites-container").show();
   });
 
-  $("#favorites-close").click(function(event) {
-    $("#favorites-container").removeClass("visible");
+  $(document).click(function() {
+    $("#favorites-container").hide();
+  });
+
+  $("#favorites-container").click(function() {
+    $(this)
+      .delay(1000)
+      .hide(10);
+  });
+
+  $("#favorite-heart").click(function(e) {
+    e.stopPropagation();
+    $("#favorites-container").show();
+  });
+
+  $(document).click(function() {
+    $("#favorites-container").hide();
+  });
+
+  $("#favorites-container").click(function() {
+    $(this)
+      .delay(1000)
+      .hide(10);
+  });
+
+  $("#favorite-heart").click(function() {
+    $(".heart-mini").addClass("visible");
   });
 
   $(".tab_item")
@@ -59,6 +107,11 @@ $(function() {
 
   $(".color-wrapper").click(function() {
     $(".color-wrapper").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  $(".detail-image").click(function() {
+    $(".detail-image").removeClass("active");
     $(this).addClass("active");
   });
 });
