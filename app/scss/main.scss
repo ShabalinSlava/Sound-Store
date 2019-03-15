@@ -213,6 +213,7 @@ input[type="text"] {
     float: right;
     background-color: #fff;
     overflow: scroll;
+    overflow-x: hidden;
     z-index: 12;
   }
 }
@@ -514,20 +515,6 @@ button[class*="btn"] {
   }
 }
 
-#information-close {
-  @include respond-to(tablet) {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: inline-block;
-    background-image: url("../img/close.png");
-    background-repeat: no-repeat;
-    cursor: pointer;
-    width: 17px;
-    height: 17px;
-  }
-}
-
 // FAVORITES
 
 #favorites {
@@ -554,6 +541,7 @@ button[class*="btn"] {
     height: 100%;
     background-color: #000a26;
     overflow: scroll;
+    overflow-x: hidden;
     z-index: 12;
   }
 }
