@@ -924,6 +924,32 @@ button[class*="btn"] {
 .tab_item:nth-child(6) .image-container:nth-child(4) .detail-image {
   background-image: url("../img/Headphonebig9.png");
 }
+
+.detail-image-big {
+  position: relative;
+  display: inline-block;
+  width: 378px;
+  height: 520px;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.detail-image-big:nth-child(1) {
+  background-image: url("../img/Headphonebig1.png");
+}
+
+.detail-image-big:nth-child(2) {
+  background-image: url("../img/Headphonebig7.png");
+}
+
+.detail-image-big:nth-child(3) {
+  background-image: url("../img/Headphonebig8.png");
+}
+
+.detail-image-big:nth-child(4) {
+  background-image: url("../img/Headphonebig9.png");
+}
 //COLOURS-CONTAINER//
 
 .colours-container {

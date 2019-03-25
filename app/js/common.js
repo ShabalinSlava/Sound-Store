@@ -71,13 +71,6 @@ $(function() {
     $(".heart-mini").addClass("visible");
   });
 
-  $(".tabs-wrapper").slick({
-    dots: false,
-    arrows: true,
-    nextArrow: "<div class=arrow-next></div>",
-    prevArrow: "<div class=arrow-prev></div>"
-  });
-
   $(".tab_item")
     .not(":first")
     .hide();
@@ -88,6 +81,23 @@ $(function() {
         .eq($(this).index())
         .addClass("active");
       $(".tab_item")
+        .hide()
+        .eq($(this).index())
+        .fadeIn();
+    })
+    .eq(0)
+    .addClass("active");
+
+  $(".detail-image-big")
+    .not(":first")
+    .hide();
+  $(".image-container")
+    .click(function() {
+      $(".detail-image-big")
+        .removeClass("active")
+        .eq($(this).index())
+        .addClass("active");
+      $(".detail-image-big")
         .hide()
         .eq($(this).index())
         .fadeIn();
